@@ -46,7 +46,8 @@ public class TestRun
          // run the execution context and player
          PlayerCommand player = obtainPlayer();
          ExecutionContext context = obtainContext(player);
-         
+
+          LoggingUtil.log("Got player " + player.getFileToExecute().getName());
          //start the execution context
          context.start();
          

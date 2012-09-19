@@ -8,6 +8,7 @@ import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.types.FileSet;
 import org.flexunit.ant.LoggingUtil;
+import org.flexunit.ant.tasks.types.CompilerConstant;
 import org.flexunit.ant.tasks.types.LoadConfig;
 
 public class TaskConfiguration
@@ -79,7 +80,11 @@ public class TaskConfiguration
       fileset.setProject(project);
       compilationConfiguration.addTestSource(fileset);
    }
-   
+
+   public void addCompilerConstant(CompilerConstant constant)
+   {
+       compilationConfiguration.addCompilerConstant(constant);
+   }
    public void addLibrary(FileSet fileset)
    {
       fileset.setProject(project);
